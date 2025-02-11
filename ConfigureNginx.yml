@@ -1,0 +1,25 @@
+---
+- name: Installing and configuring Nginx in Ec2
+  hosts: all
+  become: true
+  tasks:
+    - name: Installing required WEB server
+      ansible.builtin.apt:
+       name: Nginx
+       state: present
+
+    - name: configuring the HMTL file
+      ansible.builtin.copy:
+       src: /Users/lionelbachi/Documents/Gitfolder/Ansible/Phase1-Intro/index.html
+       dest: /var/www/html/
+       owner: root
+       group: root
+       mode: '0644'
+    - name: start the service which we have installed
+      ansible.builtin.service:
+       name: Nginx
+       state: started
+       enabled: yes
+
+       
+
