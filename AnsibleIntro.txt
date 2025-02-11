@@ -1,0 +1,22 @@
+***ANSIBLE INTRODUCTION***
+
+Why Ansible
+
+Earlier we have system administrators who are all taking of all the organization servers of updates and all vulnerabilities. So ever time to install/update new package system admis needs to login to every servers and update them manually. Though we have shell scripts to automate this task for every depended of OS we need to write a shell script. For example if a organization having 20 VM's of different OS installed with different distributions (Linux with different distributions cent os, ubuntu, Alphine os, Nginx) so every different distribution needs different shell scripts which makes systems admins to write shell script in different types. To overcome this problem firstly Puppet and Chief as configuration management tools. These both tools are played vital role in system admins part while few challenges are came to learn chief and puppet.
+1) Learning curve(system admins needs to learn new language chief for Ruby and puppet
+complex code )
+2) Agentless (which system admins needs to each and every server and install agent(a software ) and they need to configure with Maste server (which controls all the servers))
+
+Why Use Ansible Instead of Manual Setup or Other Tools?
+Agentless:
+• Unlike Chef and Puppet, Ansible doesn't require an agent on the managed nodes. It only uses SSH, making it lightweight and easy to set up.
+1. Scalable:
+• One control node can manage hundreds (or thousands) of servers simultaneously.
+2.Idempotence:
+• Ansible ensures that tasks are applied only if necessary. For example, if a package is already installed, it won't reinstall it.
+3 Ease of Use:
+• Simple YAML syntax for playbooks and straightforward inventory management.
+4Multi-Purpose:
+• Beyond SSH setup, Ansible can handle software installation, system updates, application deployment, and more.
+Key Takeaway:
+You don't need to configure each server manually. Once SSH is set up for your control node, Ansible automates nearly everything else, saving time and reducing errors. If you're managing 100+ servers, Ansible is an excellent choice to streamline operations without the overhead of agent-based tools like Chef or Puppet.
